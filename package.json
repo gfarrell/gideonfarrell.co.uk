@@ -9,6 +9,7 @@
         "grunt-contrib-requirejs": "*",
         "grunt-contrib-less": "*",
         "grunt-contrib-watch": "*",
-        "uglifyjs": "*"
+        "uglifyjs": "*",
+        "load-grunt-tasks": "*"
     }
 }
