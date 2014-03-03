@@ -1,0 +1,14 @@
+{
+    "name": "gideonfarrell.co.uk",
+    "version": "0.0.1",
+    "author": "Gideon Farrell <me@gideonfarrell.co.uk>",
+    "description": "Personal website of Gideon Farrell",
+    "devDependencies": {
+        "bower": "*",
+        "grunt": "*",
+        "grunt-contrib-requirejs": "*",
+        "grunt-contrib-less": "*",
+        "grunt-contrib-watch": "*",
+        "uglifyjs": "*"
+    }
+}
