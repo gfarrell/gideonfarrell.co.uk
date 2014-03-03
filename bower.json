@@ -1,0 +1,25 @@
+{
+  "name": "gideonfarrell.co.uk",
+  "version": "0.0.1",
+  "homepage": "http://www.gideonfarrell.co.uk",
+  "authors": [
+    "Gideon Farrell <me@gideonfarrell.co.uk>"
+  ],
+  "description": "Personal site of Gideon Farrell",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": ">2.0.0",
+    "bootstrap": ">3.0.0",
+    "jquery": ">2.0.0",
+    "lodash": ">2.4.0"
+  }
+}
