@@ -1,0 +1,72 @@
+/* global module, require */
+module.exports = function(Grunt) {
+    'use strict';
+
+    // Load all of our tasks from NPM
+    require('load-grunt-tasks')(Grunt);
+
+    // Default task
+    Grunt.registerTask('default', ['less:dev', 'watch']);
+
+    Grunt.initConfig({
+        // LESS task for processing our stylesheets
+        // https://github.com/gruntjs/grunt-contrib-less
+        // Two targets: dev, production
+        less: {
+            options: {
+                paths: ['less', 'lib']
+            },
+            dev: {
+                options: {
+                    sourceMap: true,
+                    compress: false,
+                    cleancss: false
+                },
+                files: {
+                    'dist/styles.dev.css': 'less/styles.less'
+                }
+            },
+            production: {
+                options: {
+                    sourceMap: false,
+                    compress: true,
+                    cleancss: true
+                },
+                files: {
+                    'dist/styles.css': 'less/styles.less'
+                }
+            }
+        },
+        // Require.js task for compiling javascript
+        // https://github.com/gruntjs/grunt-contrib-requirejs
+        // More info: https://github.com/jrburke/r.js/blob/master/build/example.build.js
+        // This is for production only
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: 'js',
+                    mainConfigFile: 'js/main.js',
+                    optimize: 'uglify',
+                    keepBuildDir: true,
+                    name: 'main',
+                    out: 'dist/main.js'
+                }
+            }
+        },
+        // Watch task for watching files to build out
+        // https://github.com/gruntjs/grunt-contrib-watch
+        watch: {
+            options: {
+                livereload: true
+            },
+            styles: {
+                files: ['less/*.less', 'less/**/*.less'],
+                tasks: ['less:dev']
+            },
+            scripts: {
+                files: ['js/*.js', 'js/**/*.js']
+                // probably should add some jshint tasks in here at some point
+            }
+        }
+    });
+};
