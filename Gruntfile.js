@@ -8,6 +8,9 @@ module.exports = function(Grunt) {
     // Default task
     Grunt.registerTask('default', ['less:dev', 'watch']);
 
+    // Main build task
+    Grunt.registerTask('build', ['less:production', 'autoprefixer:production', 'requirejs']);
+
     Grunt.initConfig({
         // LESS task for processing our stylesheets
         // https://github.com/gruntjs/grunt-contrib-less
@@ -34,6 +37,22 @@ module.exports = function(Grunt) {
                 },
                 files: {
                     'dist/styles.css': 'less/styles.less'
+                }
+            }
+        },
+        // Autoprefixer task for prefixing CSS
+        // http://css-tricks.com/autoprefixer/
+        // https://github.com/ai/autoprefixer
+        // https://github.com/nDmitry/grunt-autoprefixer
+        autoprefixer: {
+            dev: {
+                files: {
+                    'dist/styles.dev.css': 'dist/styles.dev.css'
+                }
+            },
+            production: {
+                files: {
+                    'dist/styles.css': 'dist/styles.css'
                 }
             }
         },
@@ -66,6 +85,9 @@ module.exports = function(Grunt) {
             scripts: {
                 files: ['js/*.js', 'js/**/*.js']
                 // probably should add some jshint tasks in here at some point
+            },
+            pages: {
+                files: ['*.html']
             }
         }
     });

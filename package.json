@@ -11,6 +11,7 @@
         "grunt-contrib-requirejs": "~0.4.1",
         "clean-css": "~2.1.1",
         "uglify-js": "*",
-        "load-grunt-tasks": "*"
+        "load-grunt-tasks": "*",
+        "grunt-autoprefixer": "*"
     }
 }
