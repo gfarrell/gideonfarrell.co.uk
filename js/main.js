@@ -8,8 +8,9 @@ require.config({
     }
 });
 
-require(['animate'], function(Animate) {
+require(['jquery', 'animate', 'colour-cycler'], function($, Animate, ColourCycler) {
     'use strict';
-
-    //Animate.init();
+    
+    var c = new ColourCycler($('body'));
+    c.start();
 });

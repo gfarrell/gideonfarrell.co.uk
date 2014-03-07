@@ -1,5 +1,8 @@
 .spin-cw {
-
+    animation-duration: 1s;
+    animation-name: spin-cw;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes spin-cw {
@@ -7,6 +10,12 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(180deg);
+        transform: rotate(360deg);
     }
+}
+
+.colour-transition {
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-property: background-color, color, border-color;
 }
