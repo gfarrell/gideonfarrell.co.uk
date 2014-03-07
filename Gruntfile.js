@@ -6,7 +6,7 @@ module.exports = function(Grunt) {
     require('load-grunt-tasks')(Grunt);
 
     // Default task
-    Grunt.registerTask('default', ['less:dev', 'watch']);
+    Grunt.registerTask('default', ['less:dev', 'autoprefixer:dev', 'watch']);
 
     // Main build task
     Grunt.registerTask('build', ['less:production', 'autoprefixer:production', 'requirejs']);
@@ -80,7 +80,7 @@ module.exports = function(Grunt) {
             },
             styles: {
                 files: ['less/*.less', 'less/**/*.less'],
-                tasks: ['less:dev']
+                tasks: ['less:dev', 'autoprefixer:dev']
             },
             scripts: {
                 files: ['js/*.js', 'js/**/*.js']
