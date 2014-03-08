@@ -71,13 +71,13 @@ define(['lodash', 'jquery'], function(_, $) {
             fadeOut.css({top: 15, opacity: 0});
             _.delay(function() {
                 fadeIn.css({top: 0, opacity: 1});
-            }, 1000);
+            }, 500);
             _.delay(function() {
                 this.text(text);
                 this.css('opacity', 1);
                 fadeIn.remove();
                 fadeOut.remove();
-            }.bind(this.$el), 2000);
+            }.bind(this.$el), 1500);
         }
     });
 
