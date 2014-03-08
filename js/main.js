@@ -25,7 +25,7 @@ require(['jquery', 'lodash', 'animate', 'colour-cycler', 'activity-switcher'],
             'am an astrophysicist',
             'am a photographer',
             'am drinking tea'
-        ], {interval: 20});
+        ], {interval: 10});
 
         a.start();
     }
