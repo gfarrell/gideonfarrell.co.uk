@@ -28,4 +28,5 @@ require(['jquery', 'lodash', 'animate', 'colour-cycler', 'activity-switcher'],
         ], {interval: 20});
 
         a.start();
-});
+    }
+);
