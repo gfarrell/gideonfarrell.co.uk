@@ -8,9 +8,24 @@ require.config({
     }
 });
 
-require(['jquery', 'animate', 'colour-cycler'], function($, Animate, ColourCycler) {
-    'use strict';
-    
-    var c = new ColourCycler($('body'));
-    c.start();
+require(['jquery', 'lodash', 'animate', 'colour-cycler', 'activity-switcher'],
+    function($, _, Animate, ColourCycler, ActivitySwitcher) {
+        'use strict';
+        
+        var c = new ColourCycler($('body'));
+        c.start();
+
+        var a = new ActivitySwitcher($('#activity-box'), [
+            'am finding homes for lost electrons',
+            'am staring at the sun',
+            'am measuring solar jets',
+            'am an entrepreneur',
+            'am a natural scientist',
+            'am a developer',
+            'am an astrophysicist',
+            'am a photographer',
+            'am drinking tea'
+        ], {interval: 20});
+
+        a.start();
 });
