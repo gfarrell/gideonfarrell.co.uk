@@ -14,7 +14,7 @@ define(['jquery'], function($) {
 
         entry: function() {
             this.$avatar.addClass('spin-cw');
-            this.$avatar.animate({'margin-left': '25px'}, 2000, );
+            this.$avatar.animate({'margin-left': '25px'}, 3000, function() { $(this).removeClass('spin-cw'); });
         }
     };
 });

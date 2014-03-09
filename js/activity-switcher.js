@@ -45,17 +45,16 @@ define(['lodash', 'jquery'], function(_, $) {
 
             if(text == oldText) return;
 
-            fadeOut.text(oldText);
             fadeOut.insertAfter(this.$el);
             fadeOut.css({
                 position: 'relative',
                 left:     - this.$el.width()
             });
+            fadeOut.text(oldText);
             fadeOut.css('transition', 'top 1s ease, opacity 1s ease');
 
             this.$el.css('opacity', 0);
 
-            fadeIn.text(text);
             fadeIn.insertAfter(fadeOut);
             fadeIn.css({
                 position: 'relative',
@@ -63,6 +62,7 @@ define(['lodash', 'jquery'], function(_, $) {
                 opacity:  0,
                 top:      -15
             });
+            fadeIn.text(text);
             _.delay(function() {
                 fadeIn.css('transition', 'top 1s ease, opacity 1s ease');
             }, 100);

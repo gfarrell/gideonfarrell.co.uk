@@ -7,25 +7,35 @@
 
         <link rel="stylesheet" type="text/css" href="dist/styles.dev.css" />
         <!-- <link rel="stylesheet" type="text/css" href="dist/styles.css" /> -->
+        <link href='http://fonts.googleapis.com/css?family=Lily+Script+One|Josefin+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 
         <script language="javascript" type="text/javascript" src="lib/modernizr/modernizr.js"></script>
 
         <title>Gideon Farrell</title>
     </head>
     <body>
-        <div class="wrapper">
-            <div class="wrapper-inner">
-                <div class="page-container">
-                    <div class="masthead clearfix"></div>
-                    <img id="avatar" width="100px" src="img/avatar_small.jpg" alt="Gideon's avatar" />
-                    <div class="main-content">
-                        <h1>I am Gideon</h1>
-                        <p> and I <span id="activity-box">am waiting...</span></p>
-                    </div>
-                    <div class="mastfoot"></div>
+        <section id="page-home" class="wrapper">
+            <div class="inner">
+
+                <div class="header shadow-text">
+                    <img src="/img/avatar_small.jpg" alt="avatar" class="avatar" />
+ 
+                    <h1>I am Gideon</h1><div class="clearfix"></div>
+                    <p class="subtitle">and I <span id="activity-box">am waiting...</span></p>
                 </div>
             </div>
-        </div>
+            <footer>
+                <div class="social">
+                    <ul class="social">
+                        <li class='linkedin'><a href="http://uk.linkedin.com/in/gideonfarrell" target="_blank" title="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                        <li class='github'><a href="https://github.com/gfarrell" target="_blank" title="Github"><i class="fa fa-github-square fa-2x"></i></a></li>
+                        <li class='twitter'><a href="https://twitter.com/gideonfarrell" target="_blank" title="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+                        <li class='email' id="email"><a href="#" title="Email"><i class="fa fa-envelope fa-2x"></i></a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </footer>
+        </section>
         
         <!-- Scripts -->
         <script language="javascript" type="text/javascript" src="lib/requirejs/require.js" data-main="js/main.js"></script>

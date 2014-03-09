@@ -1,4 +1,4 @@
-/* global require */
+/* global require, window */
 
 require.config({
     paths: {
@@ -11,16 +11,12 @@ require.config({
 require(['jquery', 'lodash', 'animate', 'colour-cycler', 'activity-switcher'],
     function($, _, Animate, ColourCycler, ActivitySwitcher) {
         'use strict';
-        
-        var c = new ColourCycler($('body'));
-        c.start();
 
         var a = new ActivitySwitcher($('#activity-box'), [
             'am finding homes for lost electrons',
             'am staring at the sun',
             'am measuring solar jets',
             'am an entrepreneur',
-            'am a natural scientist',
             'am a developer',
             'am an astrophysicist',
             'am a photographer',
@@ -28,5 +24,22 @@ require(['jquery', 'lodash', 'animate', 'colour-cycler', 'activity-switcher'],
         ], {interval: 10});
 
         a.start();
+
+        var hashChange = function() {
+            var h = window.location.hash;
+            if(h == '#giginours') {
+                $('.avatar').addClass('pulsate');
+            } else {
+                $('.avatar').removeClass('pulsate');
+            }
+        };
+
+        window.addEventListener('hashchange', hashChange);
+
+        hashChange();
+
+        var emlComps = ['mailto', ':', 'me', '@', 'gideon', 'farrell', '.', 'co', '.', 'uk'];
+
+        $('#email').children('a').attr('href', emlComps.join(''));
     }
 );
