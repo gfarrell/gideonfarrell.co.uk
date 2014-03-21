@@ -33,7 +33,7 @@ define(['jquery', 'lodash'], function($, _) {
                 this.index = i;
             }
 
-            this.$el.css('background-color', c);
+            this.$el.css(this.options.property, c);
         },
         start: function() {
             this.timer = setInterval(this.cycle.bind(this), this.options.interval*1000);
