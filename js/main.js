@@ -8,8 +8,8 @@ require.config({
     }
 });
 
-require(['jquery', 'lodash', 'animate', 'colour-cycler', 'activity-switcher'],
-    function($, _, Animate, ColourCycler, ActivitySwitcher) {
+require(['jquery', 'lodash', 'activity-switcher'],
+    function($, _, ActivitySwitcher) {
         'use strict';
 
         var a = new ActivitySwitcher($('#activity-box'), [
