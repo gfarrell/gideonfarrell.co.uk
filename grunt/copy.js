@@ -9,7 +9,7 @@ module.exports = {
     },
     dist: {
         files: [
-            {flatten: true, src: ['index.html'], dest: 'dist/'}
+            {flatten: true, src: ['*.html'], dest: 'dist/'}
         ],
         options: {
             process: function(content) {
@@ -19,7 +19,7 @@ module.exports = {
                 c = c.replace('styles.dev.css', 'styles.css');
 
                 // replace the scripts
-                c = c.replace(/<!--{SCRIPTS}-->((.|\n)+)<!--{END}-->/gm, '<script language="javascript" type="text/javascript" src="main.js"></script>');
+                c = c.replace(/<!--{SCRIPTS}-->\n\s*<script.+src="js\/config.js"><\/script>\n\s*<script(\n|.)+data-main="\/js\/([A-Za-z0-9_\-]+.js)"((\n|.)+)<!--{END}-->/gm, "<script language=\"javascript\" type=\"text/javascript\" src=\"$2\"></script>");
 
                 // replace dist/ with nothing
                 c = c.replace(/dist\//g, '');
