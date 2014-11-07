@@ -17,12 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs": ">2.0.0",
-    "bootstrap": ">3.0.0",
-    "jquery": ">2.0.0",
-    "lodash": ">2.4.0",
-    "modernizr": "*",
-    "fontawesome": "*",
-    "shine": "~0.2.6"
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.15",
+    "lodash": "~2.4.1",
+    "responsive": "~3.1.3"
   }
 }

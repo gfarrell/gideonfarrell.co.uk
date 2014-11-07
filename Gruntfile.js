@@ -3,92 +3,32 @@ module.exports = function(Grunt) {
     'use strict';
 
     // Load all of our tasks from NPM
-    require('load-grunt-tasks')(Grunt);
+    require('load-grunt-config')(Grunt);
 
     // Default task
-    Grunt.registerTask('default', ['less:dev', 'autoprefixer:dev', 'watch']);
+    Grunt.registerTask('default', [
+        'copy:main',
+        'less:dev',
+        'autoprefixer:dev',
+        'connect',
+        'watch'
+    ]);
 
     // Main build task
-    Grunt.registerTask('build', ['less:production', 'autoprefixer:production', 'requirejs']);
+    Grunt.registerTask('build', [
+        'clean',
+        'less:dist',
+        'requirejs',
+        'copy:main',
+        'copy:dist',
+        'autoprefixer:dist',
+        'htmlmin:dist',
+        'imagemin'
+    ]);
 
-    Grunt.initConfig({
-        // LESS task for processing our stylesheets
-        // https://github.com/gruntjs/grunt-contrib-less
-        // Two targets: dev, production
-        less: {
-            options: {
-                paths: ['less', 'lib']
-            },
-            dev: {
-                options: {
-                    sourceMap: true,
-                    compress: false,
-                    cleancss: false
-                },
-                files: {
-                    'dist/styles.dev.css': 'less/styles.less'
-                }
-            },
-            production: {
-                options: {
-                    sourceMap: false,
-                    compress: true,
-                    cleancss: true
-                },
-                files: {
-                    'dist/styles.css': 'less/styles.less'
-                }
-            }
-        },
-        // Autoprefixer task for prefixing CSS
-        // http://css-tricks.com/autoprefixer/
-        // https://github.com/ai/autoprefixer
-        // https://github.com/nDmitry/grunt-autoprefixer
-        autoprefixer: {
-            dev: {
-                files: {
-                    'dist/styles.dev.css': 'dist/styles.dev.css'
-                }
-            },
-            production: {
-                files: {
-                    'dist/styles.css': 'dist/styles.css'
-                }
-            }
-        },
-        // Require.js task for compiling javascript
-        // https://github.com/gruntjs/grunt-contrib-requirejs
-        // More info: https://github.com/jrburke/r.js/blob/master/build/example.build.js
-        // This is for production only
-        requirejs: {
-            compile: {
-                options: {
-                    baseUrl: 'js',
-                    mainConfigFile: 'js/main.js',
-                    optimize: 'uglify',
-                    keepBuildDir: true,
-                    name: 'main',
-                    out: 'dist/main.js'
-                }
-            }
-        },
-        // Watch task for watching files to build out
-        // https://github.com/gruntjs/grunt-contrib-watch
-        watch: {
-            options: {
-                livereload: true
-            },
-            styles: {
-                files: ['less/*.less', 'less/**/*.less'],
-                tasks: ['less:dev', 'autoprefixer:dev']
-            },
-            scripts: {
-                files: ['js/*.js', 'js/**/*.js']
-                // probably should add some jshint tasks in here at some point
-            },
-            pages: {
-                files: ['*.html']
-            }
-        }
-    });
+    // Deployment
+    Grunt.registerTask('deploy', [
+        'build',
+        'sftp-deploy:dist'
+    ]);
 };
