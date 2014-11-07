@@ -13,9 +13,13 @@ module.exports = {
             shim: rcfg.shim,
             optimize: 'uglify',
             keepBuildDir: true,
-            name: 'main',
-            out: 'dist/main.js',
-            include: '../lib/requirejs/require.js'
+            outDir: 'dist/',
+            modules: [
+                {
+                    name: 'index',
+                    include: '../lib/requirejs/require.js'
+                }
+            ]
         }
     }
 };
