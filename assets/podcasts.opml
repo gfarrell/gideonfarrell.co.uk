@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+<head>
+	<title>Instacast Subscriptions from Hephaestus</title>
+	<dateCreated>Fri, 7 Nov 2014 11:06:09 GMT</dateCreated>
+	<dateModified>Fri, 7 Nov 2014 11:06:09 GMT</dateModified>
+</head>
+<body>
+	<outline text="Documentaries" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml" htmlUrl="http://www.bbc.co.uk/podcasts/series/docarchive" />
+	<outline text="Front Row Daily" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/frontrow/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qsq5" />
+	<outline text="Four Thought" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fourthought/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b010q0n0" />
+	<outline text="From Our Own Correspondent" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fooc/rss.xml" htmlUrl="http://www.bbc.co.uk/fromourowncorrespondent" />
+	<outline text="Philosophy Bites" type="rss" xmlUrl="http://philosophybites.libsyn.com/rss" htmlUrl="http://www.philosophybites.com" />
+	<outline text="Books and Authors" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/openbook/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qp6p" />
+	<outline text="File on 4" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006th08" />
+	<outline text="Thinking Allowed" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/ta/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/factual/thinkingallowed/" />
+	<outline text="Crossing Continents" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/cc/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qt55" />
+	<outline text="World Book Club" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/worldservice/wbc/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/p003jhsk" />
+	<outline text="The Life Scientific" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/tls/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4" />
+	<outline text="Michael Sandel: The Public Philosopher" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/r4sandel/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b01nmlh2" />
+	<outline text="Start the Week" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/stw/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/factual/starttheweek.shtml" />
+	<outline text="Documentary of the Week" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/r4choice/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/" />
+	<outline text="A Point of View" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/pov/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qng8" />
+	<outline text="Analysis" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006r4vz" />
+	<outline text="Desert Island Discs with Kirsty Young" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/did/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qnmr" />
+	<outline text="In Our Time With Melvyn Bragg" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qykl" />
+	<outline text="The New Statesman Podcast" type="rss" xmlUrl="https://audioboom.com/channels/1814670.rss" htmlUrl="https://audioboom.com/channel/newstatesman" />
+	<outline text="Politics Weekly" type="rss" xmlUrl="http://www.theguardian.com/politics/series/politicsweekly/podcast.xml" htmlUrl="http://www.theguardian.com/audio" />
+	<outline text="Click On" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/clickon/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006tht9" />
+	<outline text="Friday Night Comedy from BBC Radio 4" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/programmes/genres/comedy/satire/" />
+	<outline text="Law in Action" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/law/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006tgy1" />
+	<outline text="Reith Lectures" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/reith/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/reith" />
+	<outline text="University of Cambridge festival of ideas" type="rss" xmlUrl="http://www.theguardian.com/culture/series/university-of-cambridge-festival-of-ideas/podcast.xml" htmlUrl="http://www.guardian.co.uk" />
+	<outline text="Week in Westminster" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/wpr/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/news/weekinwest.shtml" />
+</body>
+</opml>
