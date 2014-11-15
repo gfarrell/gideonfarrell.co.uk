@@ -26,25 +26,10 @@ module.exports = {
                 c = c.replace(/dist\//g, '');
 
                 // add analytics code
-                // c = c.replace(
-                //     '<!--{GA}-->',
-                //     require('grunt').file.read('grunt/template.analytics.html')
-                // );
-
-                // c = c.replace(
-                //     '<!--{SOCIAL}-->',
-                //     require('grunt').template.process(
-                //         require('grunt').file.read('grunt/template.social.html'),
-                //         {
-                //             data: {
-                //                 title: 'Deadbolt - secure login for companies',
-                //                 description: 'Deadbolt gives you and your team one place to manage access to your company\'s online services.',
-                //                 image_large: 'http://www.getdeadbolt.com/img/social/og_large.png',
-                //                 image_small: 'http://www.getdeadbolt.com/img/social/og_small.png'
-                //             }
-                //         }
-                //     )
-                // );
+                c = c.replace(
+                    '<!--{GA}-->',
+                    require('grunt').file.read('grunt/template.analytics.html')
+                );
 
                 return c;
             }
