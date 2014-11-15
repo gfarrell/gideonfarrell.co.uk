@@ -5,7 +5,8 @@ module.exports = {
     main: {
         files: [
             {expand: true, flatten: false, src: ['assets/**'], dest: 'dist/', filter: 'isFile'},
-            {src: ['favicon.ico'], dest: 'dist/'}
+            {src: ['favicon.ico'], dest: 'dist/'},
+            {src: ['ajax.php'], dest: 'dist/'}
         ]
     },
     dist: {
