@@ -13,7 +13,7 @@ module.exports = {
             shim: rcfg.shim,
             optimize: 'uglify',
             keepBuildDir: true,
-            outDir: 'dist/',
+            dir: 'dist/',
             modules: [
                 {
                     name: 'index',

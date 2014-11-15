@@ -8,7 +8,7 @@ module.exports = {
         },
         cache: false,
         src: 'dist',
-        dest: '/home/www/sites/dialego-splash',
+        dest: '/home/www/sites/gideon/home',
         progress: true
     }
 };
