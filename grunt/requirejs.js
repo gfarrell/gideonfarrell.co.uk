@@ -18,6 +18,10 @@ module.exports = {
                 {
                     name: 'index',
                     include: '../lib/requirejs/require.js'
+                },
+                {
+                    name: 'podcasts',
+                    include: '../lib/requirejs/require.js'
                 }
             ]
         }
