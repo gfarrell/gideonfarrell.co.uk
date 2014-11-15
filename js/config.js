@@ -1,8 +1,9 @@
 var require;
 var require_conf = {
     paths: {
-        jquery:       '../lib/jquery/dist/jquery',
-        lodash:       '../lib/lodash/dist/lodash'
+        jquery: '../lib/jquery/dist/jquery',
+        lodash: '../lib/lodash/dist/lodash',
+        text:   '../lib/requirejs-text/text' 
     },
     shim: {},
     map: {}
