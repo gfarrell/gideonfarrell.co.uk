@@ -1,5 +1,5 @@
 require(['jquery', 'particles'], function($, particles) {
-    particles('main', {
+    particles('header', {
         particles: {
             color: '#fff',
             shape: 'circle',

@@ -1,8 +1,45 @@
-require(['jquery', 'lodash', 'text!../assets/podcasts.opml!strip'], function($, _, data) {
+require(['jquery', 'lodash', 'particles', 'text!../assets/podcasts.opml!strip'], function($, _, particles, data) {
     $pp = $(data);
     $pp.each(function(i, outline) {
         if(outline.tagName == 'outline') {
             console.log($(outline).attr('text'));
         }
+    });
+
+    particles('header', {
+        particles: {
+            color: '#fff',
+            shape: 'circle',
+            opacity: 0.5,
+            size: 2,
+            size_random: true,
+            nb: 20,
+            line_linked: {
+                enable_auto: true,
+                distance: 250,
+                color: '#fff',
+                opacity: 0.5,
+                width: 1,
+                condensed_mode: {
+                    enable: true,
+                    rotateX: 600,
+                    rotateY: 600
+                }
+            },
+            anim: {
+                enable: true,
+                speed: 1
+            }
+        },
+        interactivity: {
+            enable: true,
+            mouse: {
+                distance: 250
+            },
+            detect_on: 'window', // "canvas" or "window"
+            mode: 'grab'
+        },
+        /* Retina Display Support */
+        retina_detect: true
     });
 });
