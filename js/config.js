@@ -6,7 +6,11 @@ var require_conf = {
         text:      '../lib/requirejs-text/text',
         particles: '../lib/particles.js/particles'
     },
-    shim: {},
+    shim: {
+        particles: {
+            exports: 'particlesJS'
+        }
+    },
     map: {}
 };
 
