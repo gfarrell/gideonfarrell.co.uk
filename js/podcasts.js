@@ -1,11 +1,4 @@
-require(['jquery', 'lodash', 'particles', 'text!../assets/podcasts.opml!strip'], function($, _, particles, data) {
-    $pp = $(data);
-    $pp.each(function(i, outline) {
-        if(outline.tagName == 'outline') {
-            console.log($(outline).attr('text'));
-        }
-    });
-
+require(['particles', 'podcast-list', 'text!../assets/podcasts.opml'], function(particles, PodcastList, data) {
     particles('header', {
         particles: {
             color: '#fff',
@@ -13,7 +6,7 @@ require(['jquery', 'lodash', 'particles', 'text!../assets/podcasts.opml!strip'],
             opacity: 0.5,
             size: 2,
             size_random: true,
-            nb: 20,
+            nb: 25,
             line_linked: {
                 enable_auto: true,
                 distance: 250,
@@ -42,4 +35,6 @@ require(['jquery', 'lodash', 'particles', 'text!../assets/podcasts.opml!strip'],
         /* Retina Display Support */
         retina_detect: true
     });
+
+    new PodcastList('.podcasts-list', data);
 });
