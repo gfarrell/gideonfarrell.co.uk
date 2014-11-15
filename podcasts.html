@@ -9,7 +9,7 @@
 
         <!--{STYLES}-->
         <link rel="stylesheet" href="dist/styles.dev.css" media="screen" charset="utf-8">
-        <link href='http://fonts.googleapis.com/css?family=Lily+Script+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Lily+Script+One' rel='stylesheet' type='text/css'>
         <!--{END}-->
 
         <link rel="shortcut icon" href="//www.gideonfarrell.co.uk/favicon.ico">
@@ -18,13 +18,26 @@
         <header id="header">
             <h1>Podcasts</h1>
         </header>
-        <div class="container">
-            <p class="lead">I listen to a <strong>lot</strong> of podcasts. Here's a list of them, which has been developed over the years.</p>
-
-            <ul class="podcasts-list">
-
-            </ul>
-        </div>
+        <section class="podcasts-list container">
+            <div class="row podcast">
+                <div class="podcast__inner">
+                    <div class="col-xs-2">
+                        <img class="podcast__image" src="http://www.bbc.co.uk/podcasts/assets/artwork/docarchive.jpg" alt="cover image">
+                    </div>
+                    <div class="col-xs-8">
+                        <h2 class="podcast__title">Documentaries</h2>
+                        <p class="podcast__description">An indepth look at stories and issues from around the world. This podcast offers you the chance to access landmark series from our archive.</p>
+                    </div>
+                    <div class="col-xs-2">
+                        <ul class="podcast__meta">
+                            <li class="podcast__meta__category">News &amp; Politics</li>
+                            <li class="podcast__meta__updated">12th Nov 2014</li>
+                            <li class="podcast__meta__link"><a href="http://www.bbc.co.uk/podcasts/series/docarchive" title="website">website</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!--{SCRIPTS}-->
         <script language="javascript" type="text/javascript" src="js/config.js"></script>
