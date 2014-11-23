@@ -18,6 +18,6 @@ module.exports = function(Grunt) {
         'less:dist',
         'requirejs',
         'autoprefixer:dist',
-        'imagemin'
+        // 'imagemin'
     ]);
 };

@@ -14,7 +14,8 @@ module.exports = {
             optimize: 'uglify',
             keepBuildDir: true,
             name: 'main',
-            out: 'assets/dist/main.js'
+            out: 'assets/dist/main.js',
+            include: '../../lib/requirejs/require'
         }
     }
 };
