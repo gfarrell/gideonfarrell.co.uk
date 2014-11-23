@@ -19,3 +19,34 @@ Route::get('/', function()
 Route::get('/podcasts', function() {
 	return View::make('podcasts');
 });
+
+Route::get('/podcast/fetch', function() {
+	$url = Input::get('url');
+	$validator = Validator::make(['url' => $url], ['url' => ['required', 'url']]);
+
+	// Never trust user input
+	if($validator->passes()) {
+		$data = Cache::remember('podcast:'.base64_encode($url), Carbon\Carbon::now()->addDay(), function() use ($url) {
+			$curl = new Curl\Curl();
+			$curl->get($url);
+
+			if($curl->error) {
+				return ['error', $curl->error_code];
+			} else {
+				return $curl->response;
+			}
+		});
+
+		if(is_array($data) && $data[0] == 'error') {
+			App::abort(500, 'cURL error: ' . $data[1]);
+		} else {
+			$response = Response::make($data, 200);
+			$response->header('Content-Type', 'text/xml');
+			$response->header('Access-Control-Allow-Origin', $_SERVER['HTTP_HOST']);
+
+			return $response;
+		}
+	} else {
+		App::abort(400, 'Invalid URL');
+	}
+});

@@ -6,7 +6,8 @@ var require_conf = {
         text:      '../../lib/requirejs-text/text',
         particles: '../../lib/particles.js/particles',
         jave:      '../../lib/Jave/jave',
-        jave_api:  '../../lib/Jave/jave_api'
+        jave_api:  '../../lib/Jave/jave_api',
+        moment:    '../../lib/moment/moment'
     },
     shim: {
         particles: {

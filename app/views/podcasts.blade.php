@@ -1,10 +1,10 @@
 @extends('layouts.default')
 
 @section('content')
-<header id="header">
+<header data-behaviour="particles" data-particles-count="30">
     <h1>Podcasts</h1>
 </header>
-<section class="podcasts-list container">
+<section data-behaviour="podcasts" data-podcasts-url="/assets/podcasts.opml" class="podcasts-list container">
     <div class="row podcast">
         <div class="podcast__inner">
             <div class="col-xs-2">

@@ -1,16 +1,18 @@
-define(['jquery', 'lodash', 'Jave'], function($, _, Jave) {
+define(['jquery', 'lodash', 'jave', 'moment'], function($, _, Jave, moment) {
     var PodcastList = function(el, dataUrl) {
         this.$el = $(el);
+        this.$el.empty();
 
         $.get(dataUrl, {}, function(data) {
             this.load(data);
-        }, 'xml');
+        }.bind(this), 'xml');
     };
 
     _.extend(PodcastList.prototype, {
-        load: function($data) {
+        load: function(data) {
             // run through <outline> entries and process each
             // we'll use jQuery to load it as DOM
+            var $data    = $(data);
             var outlines = $data.find('outline');
 
             if(outlines.length > 0) {
@@ -30,20 +32,14 @@ define(['jquery', 'lodash', 'Jave'], function($, _, Jave) {
         loadDataForOutline: function(outline, callback) {
             var url = outline.getAttribute('xmlUrl');
 
-            // have to load via iframe
-            var $iframe = $('<iframe style="display: none">');
-            $iframe.appendTo('body');
-            $iframe.on('load', function() {
-                this.processPodcastData($iframe[0], callback);
-
-                $iframe.remove();
-            }.bind(this));
-
-            $iframe.attr('src', url);
+            // load via AJAX
+            $.get('/podcast/fetch', {url: url}, function(response) {
+                this.processPodcastData(response, callback);
+            }.bind(this), 'xml');
         },
 
         processPodcastData: function(data, callback) {
-            var $channel = $(data);
+            var $channel = $(data).find('channel').first();
 
             // Extract the following data:
             // - image url
@@ -53,16 +49,50 @@ define(['jquery', 'lodash', 'Jave'], function($, _, Jave) {
             // - last updated date
             // - web url
 
-            var imageUrl    = $channel.children('image').first().find('url').html();
-            var title       = $channel.children('title').first().html();
-            var description = $channel.children('description').first().html();
-            var category    = $channel.children('category').first().html();
-            var updated     = $channel.children('pubDate').first().html();
-            var website     = $channel.children('link').first().html();
+            var podcast = {
+                imageUrl:     $channel.children('itunes\\:image').first().attr('href'),
+                title:        $channel.children('title').first().html(),
+                description:  $channel.children('description').first().html(),
+                category:     $channel.children('itunes\\:category').first().attr('text') || 'Uncategorised',
+                updated:      $channel.children('pubDate').first().html(),
+                website:      $channel.children('link').first().html()
+            };
 
-            console.log(title);
+            if(podcast.updated) {
+                podcast.updated = moment(podcast.updated).fromNow();
+            }
 
-            // callback.call(this);
+            var html = this.makeRow(podcast);
+
+            $(html).appendTo(this.$el);
+            callback.call(this);
+        },
+
+        makeRow: function(data) {
+            var template  = '<div class="row podcast">';
+                    template += '<div class="podcast__inner">';
+                        template += '<div class="col-xs-2">';
+                            template += '<img class="podcast__image" src="<%= imageUrl %>" alt="cover image">';
+                        template += '</div>';
+                        template += '<div class="col-xs-10">';
+                            template += '<div class="row">';
+                                template += '<h2 class="podcast__title"><%= title %></h2>';
+                                template += '<p class="podcast__description"><%= description %></p>';
+                            template += '</div>';
+                            template += '<div class="row">';
+                                template += '<p class="podcast__meta">';
+                                if(data.category) {
+                                    template += 'In <span class="podcast__meta__category"><%= category %></span>. ';
+                                }
+                                if(data.updated) {
+                                    template += 'Last updated <span class="podcast__meta__updated"><%= updated %></span>.';
+                                }
+                                template += '</p>';
+                            template += '</div>';
+                        template += '</div>';
+                    template += '</div>';
+                template += '</div>';
+            return _.template(template, data);
         }
 
     });
