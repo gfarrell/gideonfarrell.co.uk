@@ -70,7 +70,7 @@ define(['jquery', 'lodash', 'jave', 'moment'], function($, _, Jave, moment) {
 
         makeRow: function(data) {
             var template  = '<div class="row podcast">';
-                    template += '<div class="podcast__inner">';
+                    template += '<a href="<%= website %>" target="_blank" title="<%= title %>"><div class="podcast__inner">';
                         template += '<div class="col-xs-2">';
                             template += '<img class="podcast__image" src="<%= imageUrl %>" alt="cover image">';
                         template += '</div>';
@@ -90,7 +90,7 @@ define(['jquery', 'lodash', 'jave', 'moment'], function($, _, Jave, moment) {
                                 template += '</p>';
                             template += '</div>';
                         template += '</div>';
-                    template += '</div>';
+                    template += '</div></a>';
                 template += '</div>';
             return _.template(template, data);
         }

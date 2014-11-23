@@ -20,9 +20,7 @@
 </head>
 
 <body class="page-{{ $view_name }}">
-    <div id="PageContent">
-        @yield('content')
-    </div>
+    @yield('content')
 
     <!--{SCRIPTS}-->
     @if(App::environment('dev'))
