@@ -14,7 +14,7 @@
 		<div class="centre col-xs-4 col-s-2 col-m-1"><a href="https://uk.linkedin.com/in/gideonfarrell" title="Visit me on LinkedIn"><img src="/assets/img/social/LinkedIn.png" alt="linkedin" class="social_icon"></a></div>
 		<div class="centre col-xs-4 col-s-2 col-m-1 reset-xs-only"><a href="https://github.com/gfarrell" title="Fork me on Github"><img src="/assets/img/social/Github.png" alt="github" class="social_icon"></a></div>
 		<div class="centre col-xs-4 col-s-2 col-m-1"><a href="https://www.goodreads.com/user/show/11251279-gideon" title="Read my good reads"><img src="/assets/img/social/Goodreads.png" alt="goodreads" class="social_icon"></a></div>
-		<div class="centre col-xs-4 col-s-2 col-m-1"><a class="mailto" href="" title="Drop me an email"><img src="/assets/img/social/Email.png" alt="email" class="social_icon"></a></div>
+		<div class="centre col-xs-4 col-s-2 col-m-1"><a data-behaviour="mailto" data-mailto-address="me" href="" title="Drop me an email"><img src="/assets/img/social/Email.png" alt="email" class="social_icon"></a></div>
 	</div>
 </footer>
 @endsection
