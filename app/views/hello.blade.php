@@ -9,7 +9,7 @@
 
 <footer class="container">
 	<div class="row">
-		<div class="centre col-xs-4 col-s-2 col-m-1 offset-m-3"><a href="https://dispatches.gideonfarrell.co.uk" title="Check out my blog"><img src="/assets/img/social/Blog.png" alt="blog" class="social_icon"></a></div>
+		<div class="centre col-xs-4 col-s-2 col-m-1 offset-m-3"><a href="https://dispatchd.io" title="Check out my blog"><img src="/assets/img/social/Blog.png" alt="blog" class="social_icon"></a></div>
 		<div class="centre col-xs-4 col-s-2 col-m-1"><a href="https://twitter.com/gideonfarrell" title="Follow me on Twitter"><img src="/assets/img/social/Twitter.png" alt="twitter" class="social_icon"></a></div>
 		<div class="centre col-xs-4 col-s-2 col-m-1"><a href="https://uk.linkedin.com/in/gideonfarrell" title="Visit me on LinkedIn"><img src="/assets/img/social/LinkedIn.png" alt="linkedin" class="social_icon"></a></div>
 		<div class="centre col-xs-4 col-s-2 col-m-1 reset-xs-only"><a href="https://github.com/gfarrell" title="Fork me on Github"><img src="/assets/img/social/Github.png" alt="github" class="social_icon"></a></div>
