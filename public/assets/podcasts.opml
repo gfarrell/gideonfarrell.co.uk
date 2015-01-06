@@ -2,23 +2,24 @@
 <opml version="1.0">
 <head>
 	<title>Instacast Subscriptions from Hephaestus</title>
-	<dateCreated>Sun, 23 Nov 2014 01:44:55 GMT</dateCreated>
-	<dateModified>Sun, 23 Nov 2014 01:44:55 GMT</dateModified>
+	<dateCreated>Tue, 6 Jan 2015 14:37:47 GMT</dateCreated>
+	<dateModified>Tue, 6 Jan 2015 14:37:47 GMT</dateModified>
 </head>
 <body>
-	<outline text="Germany: Memories of a Nation" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/germany/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b04dwbwz" />
+	<outline text="Design Details" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:125598138/sounds.rss" htmlUrl="http://designdetails.fm" />
 	<outline text="Analysis" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/analysis/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006r4vz" />
 	<outline text="Books and Authors" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/openbook/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qp6p" />
 	<outline text="Click On" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/clickon/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006tht9" />
 	<outline text="Crossing Continents" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/cc/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qt55" />
 	<outline text="Desert Island Discs with Kirsty Young" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/did/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qnmr" />
-	<outline text="Documentaries" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml" htmlUrl="http://www.bbc.co.uk/podcasts/series/docarchive" />
+	<outline text="Documentaries" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/worldservice/docarchive/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/p00fvhsf" />
 	<outline text="Documentary of the Week" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/r4choice/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/" />
 	<outline text="File on 4" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fileon4/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006th08" />
 	<outline text="Four Thought" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fourthought/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b010q0n0" />
 	<outline text="Friday Night Comedy from BBC Radio 4" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fricomedy/rss.xml" htmlUrl="http://www.bbc.co.uk/radio4/programmes/genres/comedy/satire/" />
 	<outline text="From Our Own Correspondent" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/fooc/rss.xml" htmlUrl="http://www.bbc.co.uk/fromourowncorrespondent" />
 	<outline text="Front Row Daily" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/frontrow/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qsq5" />
+	<outline text="Germany: Memories of a Nation" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/germany/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b04dwbwz" />
 	<outline text="In Our Time With Melvyn Bragg" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006qykl" />
 	<outline text="The Inquiry" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/worldservice/inquiry/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/p029399x" />
 	<outline text="Law in Action" type="rss" xmlUrl="http://downloads.bbc.co.uk/podcasts/radio4/law/rss.xml" htmlUrl="http://www.bbc.co.uk/programmes/b006tgy1" />
